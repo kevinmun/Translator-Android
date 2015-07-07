@@ -54,6 +54,10 @@ public abstract class BaseActivity<A> extends ActionBarActivity {
     }
 
     //region event bus
+    public EventBus getEventBus(){
+        return eventBus;
+    }
+
     public void initEventSupport(){
         if (!registered) {
             registerEventBus();
@@ -76,30 +80,6 @@ public abstract class BaseActivity<A> extends ActionBarActivity {
     private void unregisterEventBus(){
         eventBus.unregister(getActivity());
         registered = false;
-    }
-    //endregion
-
-    //region action bar events
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
     //endregion
 }
