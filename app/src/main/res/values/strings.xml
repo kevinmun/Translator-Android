@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">Translator</string>
     <string name="title_activity_main">Translator</string>
-
+    <string-array name="languages">
+        <item>english_key:eng</item>
+        <item>french_key:fra</item>
+        <item>polish_key:pol</item>
+    </string-array>
+    <string name="english_key">English</string>
+    <string name="french_key">French</string>
+    <string name="polish_key">Polish</string>
 </resources>

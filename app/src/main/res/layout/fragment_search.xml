@@ -10,10 +10,12 @@
         android:orientation="horizontal"
         android:weightSum="1">
         <EditText
+            android:id="@+id/search_bar_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.95"/>
         <ImageButton
+            android:id="@+id/search_button"
             android:layout_width="@dimen/fragment_searchbar_icon_size"
             android:layout_height="@dimen/fragment_searchbar_icon_size"
             android:background="@drawable/search"/>
