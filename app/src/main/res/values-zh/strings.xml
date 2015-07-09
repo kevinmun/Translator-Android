@@ -1,2 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">Crossover翻译者</string>
+    <string name="title_activity_main">Crossover 翻译者</string>
+    <string name="english_key">英语</string>
+    <string name="french_key">法国语</string>
+    <string name="polish_key">波兰语</string>
+</resources>

@@ -16,6 +16,7 @@ public class TranslatorApplication extends Application {
     private EventBus eventBus;
     private IAppController appController;
     private IRestManager restManager;
+    private AppPref appPref;
 
     @Override
     public void onCreate() {
@@ -24,6 +25,7 @@ public class TranslatorApplication extends Application {
         restManager = new RestManager();
         restManager.start(this);
         appController = AppController.start(this);
+        appPref = new AppPref(this);
     }
 
     public EventBus getEventBus(){
@@ -31,5 +33,7 @@ public class TranslatorApplication extends Application {
     }
 
     public IRestManager getRestManager() {return restManager;}
+
+    public AppPref getAppPref() {return appPref;}
 
 }

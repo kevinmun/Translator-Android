@@ -6,7 +6,13 @@
     android:orientation="vertical">
     <fragment
         android:id="@+id/search_fragment"
-        android:name="com.crossover.translator.fragments.searchFragment"
+        android:name="com.crossover.translator.fragments.SearchFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/result_fragment"
+        android:name="com.crossover.translator.fragments.ResultFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:layout="@layout/fragment_search" />

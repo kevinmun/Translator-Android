@@ -9,10 +9,11 @@
         android:layout_margin="@dimen/fragment_searchbar_margin"
         android:orientation="horizontal"
         android:weightSum="1">
-        <EditText
+        <AutoCompleteTextView
             android:id="@+id/search_bar_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:singleLine="true"
             android:layout_weight="0.95"/>
         <ImageButton
             android:id="@+id/search_button"
@@ -32,6 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.6"></Spinner>
         <ImageButton
+            android:id="@+id/inverse_button"
             android:layout_width="@dimen/fragment_cyclearrow_icon_size"
             android:layout_height="@dimen/fragment_cyclearrow_icon_size"
             android:layout_gravity="center"

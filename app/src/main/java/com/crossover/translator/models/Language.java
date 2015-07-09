@@ -6,6 +6,7 @@ package com.crossover.translator.models;
 public class Language {
     private String languageName;
     private String languageCode;
+    private String wikiLanguageCode;
 
     public void setLanguageName(String languageName){
         this.languageName = languageName;
@@ -21,5 +22,13 @@ public class Language {
 
     public String getLanguageCode(){
         return languageCode;
+    }
+
+    public void setWikiLanguageCode(String wikiLanguageCode){
+        this.wikiLanguageCode = wikiLanguageCode;
+    }
+
+    public String getWikiLanguageCode(){
+        return wikiLanguageCode;
     }
 }

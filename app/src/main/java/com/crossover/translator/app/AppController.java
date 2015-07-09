@@ -53,7 +53,7 @@ public class AppController implements  IAppController {
 
     private void getTranslation(Language fromLanguage, Language toLanguage, String phrase, int page, int pageSize){
         TranslationRequest req = new TranslationRequest(fromLanguage,toLanguage,phrase,page,pageSize);
-        context.getRestManager().performRequest(req,new TranslationRequestListener());
+        context.getRestManager().performRequest(req,new TranslationRequestListener(fromLanguage,phrase));
     }
 
     private void getLanguages(){
@@ -66,6 +66,7 @@ public class AppController implements  IAppController {
            int resourceId = resources.getIdentifier(breakDownString[0], "string", context.getPackageName());
            language.setLanguageName(resources.getString(resourceId));
            language.setLanguageCode(breakDownString[1]);
+           language.setWikiLanguageCode(breakDownString[2]);
            languages.add(language);
        }
         context.getEventBus().post(new GetLanguagesSuccessEvent(languages));
